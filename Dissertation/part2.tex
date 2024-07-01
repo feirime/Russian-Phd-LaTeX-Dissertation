@@ -23,19 +23,20 @@
 	\captiondelim{ } % разделитель идентификатора с номером от наименования
 	\caption{расчёт плотности состояний полным перебором}\label{lst:dos_exhaustive}
 	\begin{Verb}
-GPU configuration:
-creating massive of configurations 1D chain by bit offset
-creating G-tensor [config right][E][M][prime number set]
- FOR (Number of layer in cell)
+Конфигурация GPU:
+Создание массива конфигураций 1D цепочки с использованием смещения битов
+Создание G-тензора [конфигурация справа][E][M][множество простых чисел]
+ FOR (Количество слоев в ячейке)
  {
-  FOR (Each added 1D chain)
+  FOR (Каждая добавленная 1D цепочка)
   {
-   FOR (Each configuration of the outermost layer of the build-up lattice)
+   FOR (Каждая конфигурация самого внешнего слоя нарастающей решетки)
    {
-    FOR (Each configuration of added 1D chain)
-     Calculate energy and magnetic susceptibility
-     Atomic add degeneration of the build-up lattice in G-tensor[configuration of 
-     outermost layer][energy][magnetic susceptibility][prime numer coefficients]
+    FOR (Каждая конфигурация добавленной 1D цепочки)
+     Вычисление энергии и магнитной восприимчивости
+     Атомарное добавление вырождения нарастающей решетки в 
+     G-тензор [конфигурация внешнего слоя][энергия][магнитная 
+     восприимчивость][коэффициенты простых чисел]
     ENDFOR
    }
    ENDFOR
@@ -43,9 +44,9 @@ creating G-tensor [config right][E][M][prime number set]
   ENDFOR
  }
  ENDFOR
-Deciphering degeneracies from the set of prime numbers
-Reformating data from G-tensor to degeneracy, energy, magnetic susceptibility 
-density of states
+Расшифровка вырождений из множества простых чисел
+Переформатирование данных из G-тензора в вырождение, энергию, плотность 
+состояний магнитной восприимчивости
 	\end{Verb}
 \end{ListingEnv}
 
